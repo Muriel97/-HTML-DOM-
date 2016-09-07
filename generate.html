@@ -1,0 +1,46 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>DOM Generation</title>
+	<script type="text/javascript" src='IC.js'></script>
+    <script type="text/javascript" src="load.js"></script>
+    <script type="text/javascript" src="myLog.js"></script>
+    <script type="text/javascript" src="mgGenerateDOM.js"></script>
+</head>
+<body>
+<h1>DOM Generation</h1>
+<div id="content">
+<form id="generator" action="">
+	<fieldset>
+    	<h2>Source</h2>
+        <labal for="source">
+          <p>请在此处输入HTML文本</p>
+          <p>&nbsp;</p>
+    </labal>
+        <p>
+          <textarea id="source" cols="120" rows="20">
+&lt;li id="$commentId" class="$commentClass" style="background-color:white"&gt;
+	&lt;a href="$countHref" class="counter" title="$countTitle" onclick="window.open(this.href)"; return false;"&gt;$countContent&lt;/a&gt;
+    &lt;span class="commentauthor"&gt;&lt;a href="$authorHref" rel="external nofollow"&gt;$authorContent&lt;/a&gt;&lt;/span&gt;
+    &lt;small class="comment-meta"&gt;
+    	&lt;a href="$metaHref" title="$metaTitle"&gt;$metaContent&lt;/a&gt;
+    &lt;/small&gt;
+    &lt;div class="comment-content"&gt;
+    	$commentContent
+    &lt;/div&gt;
+&lt;/li&gt;
+        </textarea>
+        </p>
+        <p>
+          <input id="generate" type="button" value="&#8595; generate &#8595;" />
+        </p>
+    <h2>DOM Code</h2>
+        <label for="result">生成的脚本:<br />
+      </label>
+        <textarea id="result" cols="120" rows="20"></textarea>
+    </fieldset>
+</form>
+</div>
+</body>
+</html>
